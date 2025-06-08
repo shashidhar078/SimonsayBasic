@@ -32,9 +32,7 @@ function levelUp()
     let rndIndx=Math.floor(Math.random()*3);
     let rndColor=color[rndIndx];
     let btn=document.querySelector(`.${rndColor}`);
-    console.log(rndIndx);
-    console.log(rndColor);
-    console.log(btn);
+    gameSeq.push(rndColor);
     flashy(btn);
 }
 
@@ -42,12 +40,6 @@ function levelUp()
 // let but2=document.querySelector("#but2");
 // let but3=document.querySelector("#but3");
 // let but4=document.querySelector("#but4");
-let btns=document.querySelectorAll(".box")
-
-
-function bntPress(){
-    console.log("Button was Pressed");
-}
 
 // but1.addEventListener("click",function(){
 //     console.log("Button1 was pressed!!")
@@ -65,7 +57,30 @@ function bntPress(){
 //     console.log("Button4 was pressed!!")
 //     flashy(but4);
 // })
+function checkAns()
+{
+    let idx=level-1;
+    if(userSeq[idx]===gameSeq[idx])
+    {
+        console.log("Good to go");
+    }
+    else{
+        heading.innerText=`Game Over:${level} Press any key to start again`;    
+    }
+}
 
+function bntPress(){
+    console.log("Button was Pressed");
+    let btn=this;
+    flashy(btn);
+
+    let userColor=btn.getAttribute("id");
+    userSeq.push(userColor);
+    checkAns();
+}
+
+
+let btns=document.querySelectorAll(".box")
 for(btn of btns)
 {
     btn.addEventListener("click",bntPress);
