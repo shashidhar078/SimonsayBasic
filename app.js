@@ -38,26 +38,35 @@ function levelUp()
     flashy(btn);
 }
 
-let but1=document.querySelector("#but1");
-let but2=document.querySelector("#but2");
-let but3=document.querySelector("#but3");
-let but4=document.querySelector("#but4");
+// let but1=document.querySelector("#but1");
+// let but2=document.querySelector("#but2");
+// let but3=document.querySelector("#but3");
+// let but4=document.querySelector("#but4");
+let btns=document.querySelectorAll(".box")
 
 
+function bntPress(){
+    console.log("Button was Pressed");
+}
 
-but1.addEventListener("click",function(){
-    console.log("Button1 was pressed!!")
-    flashy(but1);
-})
-but2.addEventListener("click",function(){
-    console.log("Button2 was pressed!!")
-    flashy(but2);
-})
-but3.addEventListener("click",function(){
-    console.log("Button3 was pressed!!")
-    flashy(but3);
-})
-but4.addEventListener("click",function(){
-    console.log("Button4 was pressed!!")
-    flashy(but4);
-})
+// but1.addEventListener("click",function(){
+//     console.log("Button1 was pressed!!")
+//     flashy(but1);
+// })
+// but2.addEventListener("click",function(){
+//     console.log("Button2 was pressed!!")
+//     flashy(but2);
+// })
+// but3.addEventListener("click",function(){
+//     console.log("Button3 was pressed!!")
+//     flashy(but3);
+// })
+// but4.addEventListener("click",function(){
+//     console.log("Button4 was pressed!!")
+//     flashy(but4);
+// })
+
+for(btn of btns)
+{
+    btn.addEventListener("click",bntPress);
+}
