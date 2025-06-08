@@ -27,6 +27,7 @@ function flashy(btn)
 
 function levelUp()
 {
+    userSeq=[];
     level++;
     heading.innerText=`Level ${level}`;
     let rndIndx=Math.floor(Math.random()*3);
@@ -57,15 +58,17 @@ function levelUp()
 //     console.log("Button4 was pressed!!")
 //     flashy(but4);
 // })
-function checkAns()
+function checkAns(idx)
 {
-    let idx=level-1;
     if(userSeq[idx]===gameSeq[idx])
     {
-        console.log("Good to go");
+        if(userSeq.length==gameSeq.length)
+        {
+            setTimeout(levelUp,1000)
+        }
     }
     else{
-        heading.innerText=`Game Over:${level} Press any key to start again`;    
+        heading.innerText="Game Over ! Press any key to Start Again";    
     }
 }
 
@@ -76,7 +79,7 @@ function bntPress(){
 
     let userColor=btn.getAttribute("id");
     userSeq.push(userColor);
-    checkAns();
+    checkAns(userSeq.length-1);
 }
 
 
