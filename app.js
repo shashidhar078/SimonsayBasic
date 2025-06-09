@@ -4,6 +4,8 @@ let color=["yellow","red","purple","green"];
 let heading=document.querySelector("h2");
 gameState=false;
 level=0;
+let highestScore=0;
+ document.querySelector("body").style.backgroundColor="#45B8AC";
 
 document.addEventListener("keypress",function(event)
 {
@@ -68,7 +70,17 @@ function checkAns(idx)
         }
     }
     else{
-        heading.innerText="Game Over ! Press any key to Start Again";    
+        heading.innerHTML=`Game Over ! your score : ${level}<br><br>Press any key to Start Again`;  
+        if(highestScore<level)
+        {
+            highestScore=level;
+            heading.innerHTML=`Congratualations! your new highest score : ${highestScore} <br><br>Press any key to Start Again`;
+        }
+        document.querySelector("body").style.backgroundColor="red";
+        setTimeout(function(){
+            document.querySelector("body").style.backgroundColor="#45B8AC";
+        },150); 
+        reset(); 
     }
 }
 
@@ -87,4 +99,11 @@ let btns=document.querySelectorAll(".box")
 for(btn of btns)
 {
     btn.addEventListener("click",bntPress);
+}
+
+function reset(){
+    gameState=false;
+    level=0;
+    userSeq=[];
+    gameSeq=[];
 }
