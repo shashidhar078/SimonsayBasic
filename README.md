@@ -17,7 +17,7 @@ A classic Simon Says memory game built with HTML, CSS, and JavaScript. Test your
 ![Game Start](screenshots/game-start.jpg)
 *Initial game screen*
 
-![Gameplay](screenshots/gameplay.jpg)
+![Gameplay](screenshots/game-play.jpg)
 *Game in action showing color sequence*
 
 ![Game Over](screenshots/game-over.jpg)
