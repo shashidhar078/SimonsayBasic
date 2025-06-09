@@ -49,6 +49,15 @@ h1{
     background-color: white;
 }
 
+#start{
+    background-color: #1A1A1A;
+    color: aliceblue;
+    width: 80px;
+    height: 40px;
+    border-radius: 20%;
+    size: 10px;
+}
+
 /* ------------------------------
    Media Queries (Professional Style)
 ---------------------------------- */

@@ -4,19 +4,41 @@ let color=["yellow","red","purple","green"];
 let heading=document.querySelector("h2");
 gameState=false;
 level=0;
+let gmSt=false;
 let highestScore=0;
  document.querySelector("body").style.backgroundColor="#45B8AC";
 
 document.addEventListener("keypress",function(event)
 {
+    if(gmSt==false)
+    {
+        if(gameState==false)
+        {
+            console.log("Game has started");
+            console.log("you can play now");
+            gameState=true;
+            levelUp();
+        }
+    gmSt=true;
+    }
+    
+})
+
+let stBtn=document.querySelector("#start");
+if(gmSt==false)
+{
+    stBtn.addEventListener("click",function(){
     if(gameState==false)
     {
         console.log("Game has started");
         console.log("you can play now");
         gameState=true;
         levelUp();
-    }
+    } 
+    gmSt=true; 
 })
+}
+
 
 function flashy(btn)
 {
