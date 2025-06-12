@@ -19,7 +19,7 @@ body {
     align-items: center;
     height: 100vh; /* full viewport height */
     font-family: Verdana, sans-serif;
-    
+    font-size: 36px;
 }
 
 .box {
