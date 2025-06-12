@@ -1,15 +1,25 @@
 body {
+    height: 100%;
     text-align: center;
     margin: 0;
     padding: 0;
     font-family:Verdana, sans-serif;
-    font-size: 12px;
+   
 }
 
-h1{
+#heading{
     font-family: Verdana, sans-serif;
     color:#1A1A1A;
     font-size: 33px;
+}
+
+#welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* full viewport height */
+    font-family: Verdana, sans-serif;
+    
 }
 
 .box {
