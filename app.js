@@ -1,4 +1,5 @@
-let userSeq=[];
+ setTimeout(()=>{
+    let userSeq=[];
 let gameSeq=[];
 let color=["yellow","red","purple","green"];
 let heading=document.querySelector("h2");
@@ -129,3 +130,8 @@ function reset(){
     userSeq=[];
     gameSeq=[];
 }
+ },4000);
+
+let b=document.querySelector("body");
+b.style.backgroundColor="#45B8AC";
+
