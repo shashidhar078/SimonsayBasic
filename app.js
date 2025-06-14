@@ -63,7 +63,7 @@ function levelUp()
     userSeq=[];
     level++;
     heading.innerText=`Level ${level}`;
-    let rndIndx=Math.floor(Math.random()*3);
+    let rndIndx=Math.floor(Math.random()*4);
     let rndColor=color[rndIndx];
     let btn=document.querySelector(`.${rndColor}`);
     gameSeq.push(rndColor);
